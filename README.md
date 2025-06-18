@@ -1,2 +1,2 @@
-# MERN-Stack
+# Training
 Engineersmind Training Program 
