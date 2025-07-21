@@ -1,4 +1,4 @@
-import ApplicationService from '../services/applicationService.js';
+import ApplicationService from '../services/applicationservice.js';
 
 export const applyToJob = async (req, res, next) => {
   try {
