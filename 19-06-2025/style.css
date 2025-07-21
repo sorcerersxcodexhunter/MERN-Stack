@@ -1,0 +1,121 @@
+
+body {
+    background-image: url('./backgroung.jpg'); 
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #e5b20b;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+nav {
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 30px;
+    padding: 15px 30px;
+    margin: 20px auto;
+    width: fit-content;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+nav ul li a:hover {
+    background-color: #e5b20b;
+    color: white;
+}
+.lab{
+    background-color: white;
+    border-radius: 3px;
+}
+form{
+    margin: 20px;
+}
+.filters{
+    padding: 20px;
+    overflow: auto;
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 15px;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+    transition: transform 0.3s ease;
+}
+.card:hover{
+    transform: scale(1.05)
+}
+.card img{
+    width: 80%;
+    filter: grayscale(30%);
+}
+.card::after{
+    content: "Hot !";
+    position: absolute;
+    top:0;
+    right: 0;
+    background-color: red;
+    color: black;
+    font: 0.6em;
+    z-index: 2;
+}
+.Booking form{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin:20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.Booking input{
+    display:block;
+    width: 100%;
+    margin:10px;
+    padding:10px;
+    box-sizing: border-box;
+    border-radius: 5xp;
+    border: none
+}
+.Booking button{
+    width: 100px;
+    margin: 10px;
+}
+.Booking h2{
+    color: #e5b20b;
+}
+.call::after{
+    margin: 10px;
+    top: 0;
+    right: 0;
+}
