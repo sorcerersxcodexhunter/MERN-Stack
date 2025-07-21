@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InputPreview</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h3>Enter Input:</h3>
+    <input type="text" name="" id="inputBox" placeholder="Enter Input">
+
+    <select name="" id="previewbox" size="5" multiple></select>
+    <button class="btn" id="tofinal">Send</button>
+    <button class="btn" id="topreview">sendBack</button>
+    <select name="" id="finalbox" size="5" multiple></select>
+    <script>
+        $("#inputBox").on("keydown", function(e){
+            if(e.key==="Enter"&& this.value.trim()!=""){
+                e.preventDefault()
+                const value = this.value.trim()
+                $("#previewbox").append(`<option value="${value}">${value}</option>`)    
+                this.value ="" ;       }
+            })
+            $("#tofinal").on("click", function(){
+                $("#previewbox option:selected").each(function(){
+                    $("#finalbox").append(`<option value="${this.value}">${this.value}</option>`) 
+                    $(this).remove()   
+                    
+            })
+
+        })
+            $("#topreview").on("click", function(){
+                $("#finalbox option:selected").each(function(){
+                    $("#previewbox").append(`<option value="${this.value}">${this.value}</option>`) 
+                    $(this).remove()   
+                    
+            })
+
+        })
+
+    </script>
+    
+</body>
+</html>

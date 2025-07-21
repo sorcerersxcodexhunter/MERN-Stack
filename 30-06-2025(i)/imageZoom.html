@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageZoom</title>
+     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body><center>
+    <img src="https://th.bing.com/th/id/ODL.02169f09f1536fce11e9d3aa3a756bc2?w=101&h=123&c=10&rs=1&o=6&cb=ircwebp1&dpr=1.5&pid=AlgoBlockDebug"
+                    alt="No image Foud" style="border-radius: 20%; border: solid black;"></center>
+    <Script>
+        $("img").hover(
+            function(){
+                $(this).css({
+                    "transform":"scale(1.5)"
+                })
+            },
+            function(){
+                $(this).css({
+                    "transform":"scale(0.5)"
+                })
+            }
+        )
+    </Script>
+    
+</body>
+</html>
