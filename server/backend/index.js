@@ -30,7 +30,10 @@ const io = new SocketIOServer(server, {
 
 dotenv.config();
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: [
+      "http://localhost:5173",
+      "https://687f1e67dd57dcd798688606--glowing-begonia-4bad5f.netlify.app"
+    ],
   credentials: true
 }));
 app.use(morgan('dev'));
