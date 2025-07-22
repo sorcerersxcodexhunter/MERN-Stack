@@ -22,7 +22,7 @@ const io = new SocketIOServer(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://687f1e67dd57dcd798688606--glowing-begonia-4bad5f.netlify.app"
+      "https://687f2c8e1080970ff136f919--classy-bienenstitch-8a905c.netlify.app/"
     ],
     credentials: true
   }
@@ -32,7 +32,7 @@ dotenv.config();
 app.use(cors({
   origin: [
       "http://localhost:5173",
-      "https://687f1e67dd57dcd798688606--glowing-begonia-4bad5f.netlify.app"
+      "https://687f2c8e1080970ff136f919--classy-bienenstitch-8a905c.netlify.app/"
     ],
   credentials: true
 }));
