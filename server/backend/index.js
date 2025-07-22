@@ -20,8 +20,10 @@ const app = express();
 const server = http.createServer(app);
 const io = new SocketIOServer(server, {
   cors: {
-    origin:[ "http://localhost:5173",
-    'https://687f1e67dd57dcd798688606--glowing-begonia-4bad5f.netlify.app']
+    origin: [
+      "http://localhost:5173",
+      "https://687f1e67dd57dcd798688606--glowing-begonia-4bad5f.netlify.app"
+    ],
     credentials: true
   }
 });
