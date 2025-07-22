@@ -1,1 +1,1 @@
-export const user_api_key = "http://localhost:3000";
+export const user_api_key = "https://mern-jobportal-evw2.onrender.com";
