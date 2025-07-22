@@ -24,6 +24,7 @@ const io = new SocketIOServer(server, {
       "http://localhost:5173",
       "https://687f2c8e1080970ff136f919--classy-bienenstitch-8a905c.netlify.app/",
       "https://kaleidoscopic-croquembouche-388f48.netlify.app/"
+       "https://jobportal-pro1234.onrender.com/browse"
     ],
     credentials: true
   }
@@ -35,6 +36,7 @@ app.use(cors({
       "http://localhost:5173",
       "https://687f2c8e1080970ff136f919--classy-bienenstitch-8a905c.netlify.app/",
     "https://kaleidoscopic-croquembouche-388f48.netlify.app/"
+     "https://jobportal-pro1234.onrender.com/browse"
     ],
   credentials: true
 }));
