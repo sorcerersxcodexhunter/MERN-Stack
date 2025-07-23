@@ -182,15 +182,19 @@ export const login = async (req, res) => {
 
 export const logout = async (req, res) => {
     try {
-        return res.cookie('token', token, {
-             message: "Login successful",
+        // Clear the 'token' cookie
+        res.clearCookie('token', {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: 'None'
+        });
+
+        // Send logout success response
+        return res.status(200).json({
+            message: "Logout successful",
             status: "success",
-            success: true,
-            user: userResponse,
-  httpOnly: true,
-  secure: process.env.NODE_ENV === 'production', // true in production (Render)
-  sameSite: 'None', // for cross-origin requests
-});
+            success: true
+        });
     } catch (error) {
         return res.status(500).json({
             message: "Internal server error",
