@@ -21,7 +21,7 @@ const fileFilter = (req, file, cb) => {
     ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'].includes(file.mimetype)) {
     cb(null, true);
   } else {
-    cb(null, false);
+    cb(new Error("Invalid file type"), false);
   }
 };
 
