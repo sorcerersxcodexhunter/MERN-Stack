@@ -164,12 +164,18 @@ export const login = async (req, res) => {
             updatedAt: user.updatedAt
         };
         
-        return res.status(200).cookie("token", token).json({
-            message: "Login successful",
-            status: "success",
-            success: true,
-            user: userResponse
-        });
+        return res.status(200).cookie("token", token, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production", // true in production, false for local dev
+    sameSite: "lax", // or "strict" for extra security
+    path: "/", // make cookie available to all routes
+    maxAge: 60 * 60 * 1000 // 1 hour, matches your JWT expiry
+}).json({
+    message: "Login successful",
+    status: "success",
+    success: true,
+    user: userResponse
+});
         
     } catch (error) {
         return res.status(500).json({
