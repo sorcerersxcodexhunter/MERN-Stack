@@ -182,7 +182,7 @@ export const login = async (req, res) => {
 
 export const logout = async (req, res) => {
     try {
-        returnres.cookie('token', token, {
+        return res.cookie('token', token, {
              message: "Login successful",
             status: "success",
             success: true,
